@@ -1,0 +1,23 @@
+:root {
+  --fonte: Arial, sans-serif;
+  --branco: #FFFFFF;
+  --preto: #000000;
+  --cinza: #E2E2E2;
+  --vermelho:#a22823;
+  --roxo:#261058;
+  --pretofeio:#13141e;
+  --azul:#007BFF;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f0f0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

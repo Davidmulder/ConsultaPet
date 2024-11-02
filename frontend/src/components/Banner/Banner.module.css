@@ -1,0 +1,16 @@
+.capa {
+    width: 100%;
+    height: 323px; /* Altura fixa para telas grandes */
+    overflow: hidden; /* Para esconder qualquer parte da imagem que possa ultrapassar o contêiner */
+}
+
+.bannerImg {
+    width: 100%;
+    height: auto; /* Mantém a proporção */
+}
+
+@media (max-width: 768px) {
+    .capa {
+        height: 200px; /* Altura menor para dispositivos móveis */
+    }
+}

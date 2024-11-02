@@ -1,0 +1,57 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: var(--branco);
+    position: relative;
+    height: 60px;
+}
+
+/* Botão Hamburguer que aparece apenas em telas pequenas */
+.menuBotao {
+    font-size: 1.5em;
+    background: var(--verde); /* Define o fundo verde */
+    color: var(--branco); /* Texto branco para contraste */
+    border: none;
+    cursor: pointer;
+    display: none; /* Esconde no desktop */
+    padding: 0.5em 1em; /* Ajusta o tamanho do botão */
+    border-radius: 4px; /* Bordas arredondadas, se desejar */
+}
+/* Estilos do Menu para Desktop */
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* Menu Hamburguer ativo (exibido no Mobile) */
+.menuAtivo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--branco);
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .nav {
+        display: none; /* Oculta o menu padrão */
+    }
+
+    /* Mostra o botão hamburguer no mobile */
+    .menuBotao {
+        display: block;
+    }
+
+    /* Mostra o menu quando o botão hamburguer é acionado */
+    .menuAtivo {
+        display: flex;
+    }
+}

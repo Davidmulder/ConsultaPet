@@ -31,6 +31,7 @@ class AuthController extends Controller
          // Retornar o token para o cliente
          return response()->json([
             'message' => 'Login bem-sucedido',
+            'id'=>$user->id,
             'api_token' => $user->api_token
         ]);
     }

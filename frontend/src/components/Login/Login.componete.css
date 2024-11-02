@@ -1,0 +1,74 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Ajuste a altura para 70vh ou menos */
+  background-color: #f0f0f0;
+}
+
+.login-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Use uma largura relativa para melhor responsividade */
+  max-width: 400px; /* Limita a largura máxima em telas maiores */
+}
+
+label {
+  display: block; /* Isso garante que o rótulo fique em uma nova linha acima do input */
+  margin-bottom: 5px; /* Adiciona um espaço abaixo do rótulo */
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 94%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.success {
+  color: green;
+  text-align: center;
+}
+
+/* Media Queries para ajustes em telas menores */
+@media (max-width: 768px) {
+  .login-container {
+      height: auto; /* Deixe a altura automática para dispositivos móveis */
+      padding: 20px; /* Adicione um pouco de padding ao redor */
+  }
+
+  .login-form {
+      width: 100%; /* O formulário ocupará 100% da largura em dispositivos móveis */
+      box-shadow: none; /* Remova a sombra para um design mais limpo */
+  }
+}

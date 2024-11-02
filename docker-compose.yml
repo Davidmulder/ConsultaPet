@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  # Configuração do frontend React
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Porta externa : Porta interna no contêiner
+    depends_on:
+      - backend # O frontend espera o backend iniciar
+
+  # Configuração do backend Laravel
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80" # Porta externa : Porta interna no contêiner
+    environment:
+      # Variáveis de ambiente do Laravel
+      APP_ENV: local
+      APP_KEY: base64:chave_do_app
+      APP_DEBUG: 'true'
+      APP_URL: http://localhost:8000
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: laravel
+      DB_USERNAME: root
+      DB_PASSWORD: secret
+    depends_on:
+      - db
+
+  # Configuração do banco de dados MySQL
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

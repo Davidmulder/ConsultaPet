@@ -15,7 +15,8 @@ class ConsultaController extends Controller
      */
     public function index()
     {
-        $TodasConsulta=Consulta::with('veterinario')->get()->map(function ($Consulta) { // relaciona com tabela veterinario
+        $TodasConsulta=Consulta::where('status','!=','cancelado')
+            ->with('veterinario')->get()->map(function ($Consulta) { // relaciona com tabela veterinario
             return [
                 'id' => $Consulta->id,
                 'nome' => $Consulta->nome_paciente,
@@ -103,9 +104,12 @@ class ConsultaController extends Controller
                 'id' => $consulta->id,
                 'nome' => $consulta->nome_paciente,
                 'tutor' => $consulta->nome_tutor,
+                'raca'=>$consulta->raca,
+                'especie'=>$consulta->especie,
+                'texto'=>$consulta->motivo_consulta,
                 'status' => $consulta->status,
                 'data_hora' => $consulta->data_hora,
-                'medico_nome' => $consulta->veterinario->nome ?? 'N/A', // Nome do veterinário
+                'medico_nome' => $consulta->veterinario->id ?? 'N/A', // Nome do veterinário
             ];
 
 
@@ -129,7 +133,7 @@ class ConsultaController extends Controller
             'nome_tutor' => 'required|string|max:255',
             'motivo_consulta' => 'required|string',
             'data_hora' => 'required|date',
-            'status' => 'required|in:concluida,pendente,cacelado',
+            'status' => 'required|in:concluida,pendente,cancelado',
             ]);
 
 

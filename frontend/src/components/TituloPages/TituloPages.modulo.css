@@ -1,0 +1,12 @@
+/* Centraliza o título em qualquer tela */
+.titulo {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333; /* Ajuste a cor conforme seu design */
+    width: 100%;
+}
