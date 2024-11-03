@@ -20,7 +20,7 @@ Este projeto é uma aplicação web full stack composta por um frontend desenvol
 
 ### Login
 
-<img src="img/home.png" alt="web" align="center" width="525"><br>
+<img src="img/home.png" alt="web" align="center" width="100%"><br>
 
 
 
@@ -28,21 +28,18 @@ Este projeto é uma aplicação web full stack composta por um frontend desenvol
 
   ### Lista de veterinarios via API + Toker
 
-  <img src="img/veterinarios.png" alt="web" align="center" width="525"><br>
+  <img src="img/veterinarios.png" alt="web" align="center" width="100%"><br>
 
    ### Menu
 
-  <img src="img/inicialpagina.png" alt="web" align="center" width="525"><br>
+  <img src="img/inicialpagina.png" alt="web" align="center" width="100%"><br>
 
  ### Consultas cadastras
-  <img src="img/consultas.png" alt="web" align="center" width="525"><br>
+  <img src="img/consultas.png" alt="web" align="center" width="100%"><br>
 
 ### Cadastro de Consultas
-<img src="img/cadastroconsulta.png" alt="web" align="center" width="525"><br>
+<img src="img/cadastroconsulta.png" alt="web" align="center" width="100%"><br>
 
-### Spring boot
-<img src="img/backend API.png" alt="web" align="center" width="525"><br>
-  
   <br> 
 
 </div>
